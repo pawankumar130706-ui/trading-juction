@@ -5,7 +5,7 @@ const siteData = {
   siteName: "Trading Juction",
   tagline: "Learn • Trade • Grow",
   founderName: "sanket Kumar",
-  youtubeLink: "https://youtube.com/@yourchannel",
+  youtubeLink: "https://youtube.com/@trading_juction?si=wpfYWfM3rtnJDbq-",
   email: "yourmail@example.com",
   instagram: "trading_juction1",
   telegram: "@yourchannel",
