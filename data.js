@@ -7,7 +7,7 @@ const siteData = {
   founderName: "sanket Kumar",
   youtubeLink: "https://youtube.com/@yourchannel",
   email: "yourmail@example.com",
-  instagram: "@yourhandle",
+  instagram: "trading_juction1",
   telegram: "@yourchannel",
   subscribers: "10K+",
   videosCount: "500+",
