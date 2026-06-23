@@ -1,96 +1,87 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trading Juction | Learn • Trade • Grow</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Akash North Indian Food Corner</title>
+  <style>
+    body{font-family:Arial;margin:0;background:#fff8ef;color:#222}
+    header{background:#d35400;color:white;text-align:center;padding:25px}
+    .box{padding:20px;max-width:900px;margin:auto}
+    .item{background:white;margin:12px 0;padding:15px;border-radius:12px;box-shadow:0 2px 8px #ddd}
+    button{background:#25D366;color:white;border:0;padding:10px 15px;border-radius:8px;font-size:16px}
+    input,textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ccc}
+    footer{text-align:center;background:#222;color:white;padding:15px}
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="brand">
-      <div class="brand-icon">📈</div>
-      <div>
-        <h2 id="siteName">Trading Juction</h2>
-        <p id="tagline">Learn • Trade • Grow</p>
-      </div>
-    </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#videos">Videos</a>
-      <a href="#notes">Notes</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <p class="mini">LEARN | ANALYZE | TRADE | GROW</p>
-      <h1>Welcome to <span>Trading Juction</span></h1>
-      <p id="heroText">
-        Stock Market Education, Trading Strategies, Risk Management aur Market Psychology simple Hindi me.
-      </p>
-      <div class="buttons">
-        <a id="youtubeBtn" class="btn primary" href="#" target="_blank">▶ YouTube Channel</a>
-        <a class="btn secondary" href="#videos">Explore Content</a>
-      </div>
-    </div>
+<header>
+  <h1>Akash North Indian Food Corner</h1>
+  <p>Fresh • Tasty • North Indian Food</p>
+</header>
 
-    <div class="hero-photo">
-      <img src="assets/founder.png" alt="Trading Juction Founder" />
-      <div class="founder-card">
-        <h3 id="founderName">Pawan Kumar</h3>
-        <p>Founder • Trading Juction</p>
-      </div>
-    </div>
-  </section>
+<div class="box">
+  <h2>Our Menu</h2>
 
-  <section class="stats">
-    <div><h2 id="subscribers">10K+</h2><p>Subscribers</p></div>
-    <div><h2 id="videosCount">500+</h2><p>Videos</p></div>
-    <div><h2>Daily</h2><p>Market Learning</p></div>
-    <div><h2>Goal</h2><p>Financial Awareness</p></div>
-  </section>
+  <div class="item">
+    <h3>Paneer Butter Masala - ₹120</h3>
+    <button onclick="addItem('Paneer Butter Masala ₹120')">Add Order</button>
+  </div>
 
-  <section id="about" class="section">
-    <h2>About Channel</h2>
-    <p class="center">
-      Trading Juction ek educational platform hai jahan beginners ko trading basics,
-      chart reading, support-resistance, entry-exit planning aur risk management easy language me sikhaya jata hai.
-    </p>
-  </section>
+  <div class="item">
+    <h3>Dal Tadka - ₹80</h3>
+    <button onclick="addItem('Dal Tadka ₹80')">Add Order</button>
+  </div>
 
-  <section id="videos" class="section">
-    <h2>Latest Video Topics</h2>
-    <div id="videoList" class="grid"></div>
-  </section>
+  <div class="item">
+    <h3>Roti - ₹10</h3>
+    <button onclick="addItem('Roti ₹10')">Add Order</button>
+  </div>
 
-  <section id="notes" class="section">
-    <h2>Free Learning Notes</h2>
-    <div id="notesList" class="grid"></div>
-  </section>
+  <div class="item">
+    <h3>Jeera Rice - ₹70</h3>
+    <button onclick="addItem('Jeera Rice ₹70')">Add Order</button>
+  </div>
 
-  <section class="section">
-    <h2>Disclaimer</h2>
-    <div class="disclaimer">
-      Educational Purpose Only. Trading Juction SEBI Registered Advisor nahi hai.
-      Stock market me risk hota hai. Trading ya investment se pehle apni research karein.
-    </div>
-  </section>
+  <div class="item">
+    <h3>Veg Thali - ₹150</h3>
+    <button onclick="addItem('Veg Thali ₹150')">Add Order</button>
+  </div>
 
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p id="emailText">Email: yourmail@example.com</p>
-    <p id="instagramText">Instagram: @yourhandle</p>
-    <p id="telegramText">Telegram: @yourchannel</p>
-  </section>
+  <h2>Your Order</h2>
+  <textarea id="order" rows="5" placeholder="Selected food items"></textarea>
 
-  <footer>
-    © <span id="year"></span> Trading Juction | Learn • Trade • Grow
-  </footer>
+  <h2>Customer Details</h2>
+  <input id="name" placeholder="Your Name">
+  <input id="mobile" placeholder="Mobile Number">
+  <textarea id="address" rows="3" placeholder="Delivery Address"></textarea>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+  <button onclick="sendOrder()">Order on WhatsApp</button>
+</div>
+
+<footer>
+  <p>Akash North Indian Food Corner | Cash on Delivery Available</p>
+</footer>
+
+<script>
+function addItem(item){
+  document.getElementById("order").value += item + "\n";
+}
+
+function sendOrder(){
+  let order = document.getElementById("order").value;
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let address = document.getElementById("address").value;
+
+  let msg = "New Food Order%0A%0AName: " + name +
+            "%0AMobile: " + mobile +
+            "%0AAddress: " + address +
+            "%0A%0AOrder:%0A" + order;
+
+  let whatsappNumber = "91XXXXXXXXXX";
+  window.open("https://wa.me/" + whatsappNumber + "?text=" + msg);
+}
+</script>
+
 </body>
 </html>
