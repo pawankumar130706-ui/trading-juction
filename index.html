@@ -1,157 +1,156 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Result - Latest Jobs, Result, Admit Card</title>
-  <style>
-    body{margin:0;font-family:Arial;background:#f4f4f4;color:#111}
-    header{background:#8b0000;color:white;text-align:center;padding:18px}
-    header h1{margin:0;font-size:38px}
-    header p{margin:5px 0}
-    nav{background:#111;text-align:center;padding:10px}
-    nav a{color:white;text-decoration:none;margin:8px;font-weight:bold}
-    .search{padding:15px;text-align:center;background:white}
-    .search input{width:85%;max-width:500px;padding:12px;border:2px solid #8b0000}
-    .box-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;padding:15px}
-    .box{background:white;border:2px solid #8b0000}
-    .box h2{background:#8b0000;color:white;margin:0;padding:10px;text-align:center}
-    ul{margin:0;padding:12px 25px}
-    li{margin:10px 0}
-    li a{color:#0044cc;font-weight:bold;text-decoration:none}
-    .new{color:red;font-size:12px;font-weight:bold}
-    .admin{background:white;margin:15px;padding:15px;border:2px dashed #333}
-    input,select,button{padding:10px;margin:5px;width:90%;max-width:400px}
-    button{background:#8b0000;color:white;border:none;font-weight:bold;cursor:pointer}
-    footer{text-align:center;background:#222;color:white;padding:15px;margin-top:20px}
-  </style>
-</head>
-<body>
+<script type="module">
 
-<header>
-  <h1>CAREER RESULT</h1>
-  <p>Latest Jobs | Results | Admit Card | Answer Key | Exam Notification</p>
-</header>
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  push,
+  onValue
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 
-<nav>
-  <a href="#jobs">Latest Jobs</a>
-  <a href="#result">Results</a>
-  <a href="#admit">Admit Card</a>
-  <a href="#answer">Answer Key</a>
-  <a href="#syllabus">Syllabus</a>
-</nav>
+const firebaseConfig = {
+  apiKey: "AIzaSyCtxmeAt0yV3WRJAK7MauG5EK1HLGaOSAA",
+  authDomain: "career-result.firebaseapp.com",
+  databaseURL: "https://career-result-default-rtdb.firebaseio.com",
+  projectId: "career-result",
+  storageBucket: "career-result.firebasestorage.app",
+  messagingSenderId: "128886592036",
+  appId: "1:128886592036:web:2b09d9c07a559f8da07eb1"
+};
 
-<div class="search">
-  <input type="text" id="searchInput" placeholder="Search job, result, admit card..." onkeyup="searchItems()">
-</div>
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-<div class="box-wrap">
+window.addItem = function () {
 
-  <div class="box" id="result">
-    <h2>Results</h2>
-    <ul id="resultList">
-      <li><a href="#">Bihar Board 10th Result 2026</a> <span class="new">NEW</span></li>
-      <li><a href="#">SSC GD Result 2026</a> <span class="new">NEW</span></li>
-      <li><a href="#">Railway ALP Result 2026</a></li>
-      <li><a href="#">BPSC Result 2026</a></li>
-    </ul>
-  </div>
-
-  <div class="box" id="jobs">
-    <h2>Latest Jobs</h2>
-    <ul id="jobList">
-      <li><a href="https://ssc.gov.in" target="_blank">SSC CGL Online Form 2026</a> <span class="new">NEW</span></li>
-      <li><a href="https://www.rrbcdg.gov.in" target="_blank">Railway Group D Online Form 2026</a> <span class="new">NEW</span></li>
-      <li><a href="https://www.csbc.bih.nic.in" target="_blank">Bihar Police Constable Vacancy 2026</a></li>
-      <li><a href="#">BSSC Inter Level Online Form 2026</a></li>
-    </ul>
-  </div>
-
-  <div class="box" id="admit">
-    <h2>Admit Card</h2>
-    <ul id="admitList">
-      <li><a href="#">SSC CHSL Admit Card 2026</a></li>
-      <li><a href="#">Railway ALP Admit Card 2026</a></li>
-      <li><a href="#">Bihar Police Admit Card 2026</a></li>
-    </ul>
-  </div>
-
-  <div class="box" id="answer">
-    <h2>Answer Key</h2>
-    <ul id="answerList">
-      <li><a href="#">SSC CGL Answer Key 2026</a></li>
-      <li><a href="#">Railway Answer Key 2026</a></li>
-      <li><a href="#">CTET Answer Key 2026</a></li>
-    </ul>
-  </div>
-
-  <div class="box" id="syllabus">
-    <h2>Syllabus</h2>
-    <ul id="syllabusList">
-      <li><a href="#">SSC CGL Syllabus 2026</a></li>
-      <li><a href="#">Bihar Police Syllabus 2026</a></li>
-      <li><a href="#">BSSC Inter Level Syllabus</a></li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Important Links</h2>
-    <ul>
-      <li><a href="https://ssc.gov.in" target="_blank">SSC Official Website</a></li>
-      <li><a href="https://www.rrbcdg.gov.in" target="_blank">Railway Official Website</a></li>
-      <li><a href="https://www.bpsc.bih.nic.in" target="_blank">BPSC Official Website</a></li>
-    </ul>
-  </div>
-
-</div>
-
-<div class="admin">
-  <h2>Admin Panel - New Link Add Kare</h2>
-  <select id="category">
-    <option value="jobList">Latest Jobs</option>
-    <option value="resultList">Results</option>
-    <option value="admitList">Admit Card</option>
-    <option value="answerList">Answer Key</option>
-    <option value="syllabusList">Syllabus</option>
-  </select><br>
-  <input type="text" id="title" placeholder="Title likho">
-  <input type="text" id="link" placeholder="Link paste karo">
-  <button onclick="addItem()">Add Link</button>
-</div>
-
-<footer>
-  <p>Disclaimer: Career Result government website nahi hai. Official notification check karna zaroori hai.</p>
-  <p>© 2026 Career Result</p>
-</footer>
-
-<script>
-function addItem(){
   let category = document.getElementById("category").value;
-  let title = document.getElementById("title").value;
-  let link = document.getElementById("link").value;
+  let title = document.getElementById("title").value.trim();
+  let link = document.getElementById("link").value.trim();
 
-  if(title === "" || link === ""){
-    alert("Title aur link dono bharo");
+  if (title === "" || link === "") {
+    alert("Title aur Link bharo");
     return;
   }
 
-  let li = document.createElement("li");
-  li.innerHTML = `<a href="${link}" target="_blank">${title}</a> <span class="new">NEW</span>`;
-  document.getElementById(category).prepend(li);
+  push(ref(db, category), {
+    title: title,
+    link: link,
+    date: new Date().toLocaleDateString()
+  });
+
+  alert("Link Added Successfully");
 
   document.getElementById("title").value = "";
   document.getElementById("link").value = "";
-}
 
-function searchItems(){
+};
+
+window.searchItems = function () {
+
   let input = document.getElementById("searchInput").value.toLowerCase();
-  let items = document.querySelectorAll("li");
 
-  items.forEach(item=>{
-    item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+  document.querySelectorAll("li").forEach(function(item){
+
+      item.style.display =
+      item.innerText.toLowerCase().includes(input)
+      ? ""
+      : "none";
+
   });
-}
-</script>
 
-</body>
-</html>
+};
+
+</script>
+// ===== Realtime Database Load =====
+
+function loadCategory(categoryId){
+
+    const list=document.getElementById(categoryId);
+
+    onValue(ref(db,categoryId),snapshot=>{
+
+        // Default items hatao
+        list.querySelectorAll(".firebase-item").forEach(e=>e.remove());
+
+        if(!snapshot.exists()) return;
+
+        const data=snapshot.val();
+
+        Object.keys(data).reverse().forEach(key=>{
+
+            let item=data[key];
+
+            let li=document.createElement("li");
+
+            li.className="firebase-item";
+
+            li.innerHTML=`
+            <a href="${item.link}" target="_blank">
+            ${item.title}
+            </a>
+            <span class="new">NEW</span>
+            `;
+
+            list.prepend(li);
+
+        });
+
+    });
+
+}
+
+loadCategory("jobList");
+loadCategory("resultList");
+loadCategory("admitList");
+loadCategory("answerList");
+loadCategory("syllabusList");
+<div id="loginBox" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:9999;">
+<div style="background:#8b0000;padding:25px;border-radius:10px;color:#fff;text-align:center;width:320px;">
+<h2>Career Result Admin</h2>
+
+<input type="email" id="adminEmail" placeholder="Email" style="width:90%;padding:10px;margin:8px;">
+
+<input type="password" id="adminPassword" placeholder="Password" style="width:90%;padding:10px;margin:8px;">
+
+<button onclick="loginAdmin()" style="width:90%;padding:12px;background:#fff;color:#8b0000;font-weight:bold;">Login</button>
+
+</div>
+</div>
+https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js
+const auth=getAuth(app);
+
+window.loginAdmin=function(){
+
+const email=document.getElementById("adminEmail").value;
+
+const password=document.getElementById("adminPassword").value;
+
+signInWithEmailAndPassword(auth,email,password)
+
+.then(()=>{
+
+document.getElementById("loginBox").style.display="none";
+
+})
+
+.catch(()=>{
+
+alert("Wrong Email or Password");
+
+});
+
+};
+
+onAuthStateChanged(auth,user=>{
+
+if(user){
+
+document.getElementById("loginBox").style.display="none";
+
+}else{
+
+document.getElementById("loginBox").style.display="flex";
+
+}
+
+});
