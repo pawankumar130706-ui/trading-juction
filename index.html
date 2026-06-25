@@ -1,124 +1,180 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Juction - Latest Jobs, Results, Admit Card</title>
-  <style>
-    body{margin:0;font-family:Arial;background:#f4f4f4}
-    header{background:#8b0000;color:white;text-align:center;padding:20px}
-    header h1{margin:0;font-size:36px}
-    nav{background:#111;text-align:center;padding:10px}
-    nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
-    .notice{background:#fff3cd;padding:12px;text-align:center;font-weight:bold}
-    .container{max-width:1100px;margin:auto;padding:15px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}
-    .box{background:white;border:2px solid #8b0000}
-    .box h2{background:#8b0000;color:white;margin:0;padding:10px;text-align:center}
-    .box ul{padding:10px 25px}
-    .box li{margin:10px 0}
-    .box a{color:#0645ad;text-decoration:none;font-weight:bold}
-    .section{background:white;margin-top:15px;padding:15px;border:1px solid #ccc}
-    footer{background:#222;color:white;text-align:center;padding:15px;margin-top:20px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Result - Latest Jobs & Results</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f2f2f2;color:#222}
+header{background:#9b0000;color:white;text-align:center;padding:18px}
+header h1{margin:0;font-size:38px}
+header p{margin:5px 0 0}
+
+nav{background:#111;text-align:center;padding:10px}
+nav a{color:white;text-decoration:none;margin:8px;font-weight:bold}
+
+.notice{background:#fff3cd;color:#000;text-align:center;padding:10px;font-weight:bold}
+
+.container{max-width:1150px;margin:auto;padding:15px}
+
+.search-box{text-align:center;margin:15px}
+.search-box input{width:90%;max-width:500px;padding:12px;border:2px solid #9b0000;border-radius:5px}
+
+.quick-links{text-align:center;background:white;padding:12px;border:1px solid #ccc}
+.quick-links a{display:inline-block;background:#0066cc;color:white;padding:10px 14px;margin:5px;text-decoration:none;border-radius:4px;font-weight:bold}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;margin-top:15px}
+.box{background:white;border:2px solid #9b0000}
+.box h2{background:#9b0000;color:white;margin:0;padding:10px;text-align:center}
+.box ul{padding:10px 25px}
+.box li{margin:12px 0}
+.box a{color:#0645ad;text-decoration:none;font-weight:bold}
+.box a:hover{text-decoration:underline;color:red}
+
+.info{background:white;margin-top:15px;padding:15px;border:1px solid #ccc}
+.btn{background:#9b0000;color:white!important;padding:8px 12px;border-radius:4px;text-decoration:none;display:inline-block}
+
+footer{background:#222;color:white;text-align:center;padding:15px;margin-top:20px}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Career Juction</h1>
-  <p>Latest Jobs | Results | Admit Card | Answer Key | Syllabus</p>
+<h1>Career Result</h1>
+<p>Latest Jobs | Results | Admit Card | Answer Key | Syllabus</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">Latest Jobs</a>
-  <a href="#">Results</a>
-  <a href="#">Admit Card</a>
-  <a href="#">Syllabus</a>
-  <a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#jobs">Latest Jobs</a>
+<a href="#result">Results</a>
+<a href="#admit">Admit Card</a>
+<a href="#syllabus">Syllabus</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div class="notice">
-  ⚠️ This website is for information purpose only. Always verify from official government website.
+⚠️ किसी भी form को भरने से पहले official notification जरूर पढ़ें।
 </div>
 
-<div class="container">
+<div class="container" id="home">
 
-  <div class="grid">
-    <div class="box">
-      <h2>Latest Jobs</h2>
-      <ul>
-        <li><a href="#">Bihar Police Constable Recruitment 2026</a></li>
-        <li><a href="#">SSC GD Constable Online Form 2026</a></li>
-        <li><a href="#">Railway Group D Vacancy 2026</a></li>
-        <li><a href="#">BSSC Inter Level Recruitment 2026</a></li>
-      </ul>
-    </div>
+<div class="search-box">
+<input type="text" placeholder="Search jobs, result, admit card...">
+</div>
 
-    <div class="box">
-      <h2>Admit Card</h2>
-      <ul>
-        <li><a href="#">SSC CHSL Admit Card 2026</a></li>
-        <li><a href="#">Bihar Board Admit Card 2026</a></li>
-        <li><a href="#">Railway Exam Admit Card 2026</a></li>
-        <li><a href="#">UP Police Admit Card 2026</a></li>
-      </ul>
-    </div>
+<div class="quick-links">
+<a href="#jobs">Latest Jobs</a>
+<a href="#result">Results</a>
+<a href="#admit">Admit Card</a>
+<a href="#answer">Answer Key</a>
+<a href="#syllabus">Syllabus</a>
+<a href="#admission">Admission</a>
+</div>
 
-    <div class="box">
-      <h2>Results</h2>
-      <ul>
-        <li><a href="#">Bihar Board 10th Result 2026</a></li>
-        <li><a href="#">SSC GD Result 2026</a></li>
-        <li><a href="#">Railway ALP Result 2026</a></li>
-        <li><a href="#">BPSC Result 2026</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="grid">
 
-  <div class="grid" style="margin-top:15px">
-    <div class="box">
-      <h2>Answer Key</h2>
-      <ul>
-        <li><a href="#">SSC CGL Answer Key 2026</a></li>
-        <li><a href="#">Bihar Police Answer Key 2026</a></li>
-        <li><a href="#">Railway Answer Key 2026</a></li>
-      </ul>
-    </div>
+<div class="box" id="jobs">
+<h2>Latest Jobs</h2>
+<ul>
+<li><a href="#post1">Bihar Police Constable Recruitment 2026</a></li>
+<li><a href="#post2">SSC GD Constable Online Form 2026</a></li>
+<li><a href="#post3">Railway Group D Vacancy 2026</a></li>
+<li><a href="#post4">BSSC Inter Level Recruitment 2026</a></li>
+<li><a href="#post5">Indian Army Rally Bharti 2026</a></li>
+</ul>
+</div>
 
-    <div class="box">
-      <h2>Syllabus</h2>
-      <ul>
-        <li><a href="#">SSC GD Syllabus</a></li>
-        <li><a href="#">BSSC Inter Level Syllabus</a></li>
-        <li><a href="#">Railway Group D Syllabus</a></li>
-      </ul>
-    </div>
+<div class="box" id="result">
+<h2>Results</h2>
+<ul>
+<li><a href="#result1">Bihar Board 10th Result 2026</a></li>
+<li><a href="#result2">SSC GD Result 2026</a></li>
+<li><a href="#result3">Railway ALP Result 2026</a></li>
+<li><a href="#result4">BPSC Result 2026</a></li>
+<li><a href="#result5">CTET Result 2026</a></li>
+</ul>
+</div>
 
-    <div class="box">
-      <h2>Important Links</h2>
-      <ul>
-        <li><a href="#">Aadhaar Card</a></li>
-        <li><a href="#">PAN Card</a></li>
-        <li><a href="#">Voter ID</a></li>
-        <li><a href="#">Bihar Student Portal</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="box" id="admit">
+<h2>Admit Card</h2>
+<ul>
+<li><a href="#admit1">SSC CHSL Admit Card 2026</a></li>
+<li><a href="#admit2">Railway Exam Admit Card 2026</a></li>
+<li><a href="#admit3">Bihar Police Admit Card 2026</a></li>
+<li><a href="#admit4">UP Police Admit Card 2026</a></li>
+<li><a href="#admit5">BPSC Admit Card 2026</a></li>
+</ul>
+</div>
 
-  <div class="section">
-    <h2>About Career Juction</h2>
-    <p>
-      Career Juction पर आपको Latest Government Jobs, Sarkari Result,
-      Admit Card, Answer Key, Syllabus और Exam Updates की जानकारी मिलेगी।
-      किसी भी form को भरने से पहले official notification जरूर पढ़ें।
-    </p>
-  </div>
+<div class="box" id="answer">
+<h2>Answer Key</h2>
+<ul>
+<li><a href="#answer1">SSC CGL Answer Key 2026</a></li>
+<li><a href="#answer2">Bihar Police Answer Key 2026</a></li>
+<li><a href="#answer3">Railway Answer Key 2026</a></li>
+<li><a href="#answer4">CTET Answer Key 2026</a></li>
+</ul>
+</div>
+
+<div class="box" id="syllabus">
+<h2>Syllabus</h2>
+<ul>
+<li><a href="#sy1">SSC GD Syllabus</a></li>
+<li><a href="#sy2">BSSC Inter Level Syllabus</a></li>
+<li><a href="#sy3">Railway Group D Syllabus</a></li>
+<li><a href="#sy4">Bihar Police Syllabus</a></li>
+</ul>
+</div>
+
+<div class="box" id="admission">
+<h2>Admission</h2>
+<ul>
+<li><a href="#ad1">Bihar Board Admission 2026</a></li>
+<li><a href="#ad2">ITI Admission Form 2026</a></li>
+<li><a href="#ad3">Polytechnic Admission 2026</a></li>
+<li><a href="#ad4">University Admission 2026</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="info" id="post1">
+<h2>Bihar Police Constable Recruitment 2026</h2>
+<p>Short Information: Bihar Police Constable भर्ती के लिए online application जल्द शुरू होगा।</p>
+<p><b>Important Dates:</b> Coming Soon</p>
+<p><b>Application Fee:</b> Official notification देखें</p>
+<p><b>Age Limit:</b> As per rules</p>
+<a class="btn" href="https://www.csbc.bih.nic.in/" target="_blank">Official Website Click Here</a>
+</div>
+
+<div class="info" id="post2">
+<h2>SSC GD Constable Online Form 2026</h2>
+<p>SSC GD Constable recruitment update, eligibility, date और apply link यहाँ मिलेगा।</p>
+<a class="btn" href="https://ssc.gov.in/" target="_blank">Apply / Official Website</a>
+</div>
+
+<div class="info" id="contact">
+<h2>Contact Us</h2>
+<p>Email: careerresult@example.com</p>
+<p>Website: Career Result</p>
+</div>
+
+<div class="info">
+<h2>Disclaimer</h2>
+<p>
+Career Result कोई government website नहीं है। यह website केवल educational और information purpose के लिए है।
+किसी भी job, result, admit card या form को भरने से पहले official website जरूर check करें।
+</p>
+</div>
 
 </div>
 
 <footer>
-  © 2026 Career Juction | Educational & Information Purpose Only
+© 2026 Career Result | All Rights Reserved
 </footer>
 
 </body>
