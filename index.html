@@ -3,177 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career Result</title>
+<title>Career Result - Latest Jobs, Results, Admit Card</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#fff}
-header{background:#a40000;color:white;text-align:center;padding:18px}
-header h1{margin:0;font-size:40px}
-nav{background:#111;text-align:center;padding:10px}
-nav a{color:white;margin:8px;text-decoration:none;font-weight:bold}
-.notice{background:#ffeeba;padding:10px;text-align:center;font-weight:bold}
-.container{max-width:1100px;margin:auto;padding:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px}
-.box{border:2px solid #a40000;background:white}
-.box h2{background:#a40000;color:white;text-align:center;margin:0;padding:10px}
-.box li{margin:14px 0;font-size:19px}
-.box a{color:#000099;text-decoration:none}
-.box a:hover{color:red;text-decoration:underline}
-.post{border:2px solid #a40000;margin-top:15px;padding:12px;background:#fafafa}
-.post h2{color:#a40000;text-align:center}
-table{width:100%;border-collapse:collapse;background:white}
-td,th{border:1px solid #999;padding:10px}
-.btn{display:inline-block;background:#a40000;color:white!important;padding:10px 14px;margin:5px;text-decoration:none;border-radius:5px}
-footer{background:#222;color:white;text-align:center;padding:15px;margin-top:20px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111}
+.top{background:#b00000;color:#fff;padding:8px 20px;font-size:14px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:25px;background:#fff}
+.logo h1{margin:0;color:#b00000;font-size:42px}
+.logo p{margin:3px 0;color:#333}
+.search input{padding:12px;width:320px;border:1px solid #ccc}
+.search button{padding:12px 20px;background:#b00000;color:#fff;border:0}
+nav{background:#b00000;text-align:center}
+nav a{display:inline-block;color:#fff;text-decoration:none;padding:14px 18px;font-weight:bold}
+nav a:hover{background:#7d0000}
+.ad{margin:15px auto;max-width:1100px;text-align:center;border:1px solid #ddd;padding:15px;color:#777}
+.container{max-width:1150px;margin:auto;padding:10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:15px 0}
+.card{padding:25px;text-align:center;color:white;font-size:20px;font-weight:bold;border-radius:6px;text-decoration:none}
+.red{background:#d71919}.green{background:#008a2e}.blue{background:#0074d9}.purple{background:#7b1fa2}.orange{background:#f26b21}.brown{background:#795548}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.box{border:2px solid #b00000;background:#fff}
+.box h2{margin:0;background:#b00000;color:#fff;text-align:center;padding:10px;font-size:26px}
+.box ul{padding:10px 25px}
+.box li{margin:14px 0;font-size:18px}
+.box a{color:#0000aa;text-decoration:none}
+.box a:hover{text-decoration:underline;color:red}
+.new{float:right;background:red;color:white;font-size:11px;padding:2px 5px;border-radius:8px}
+.btn{display:block;background:#b00000;color:#fff!important;text-align:center;margin:15px auto;padding:10px;width:180px;border-radius:4px;text-decoration:none;font-weight:bold}
+.small-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:18px}
+.small{border:1px solid #ccc}
+.small h3{margin:0;background:#b00000;color:#fff;padding:9px;text-align:center;font-size:22px}
+.small p,.small a{display:block;padding:8px 15px;color:#0000aa;text-decoration:none}
+.post{border:1px solid #ccc;margin-top:18px;padding:15px}
+.post h2{color:#b00000}
+.link-btn{display:inline-block;background:#b00000;color:white;text-decoration:none;padding:10px 15px;margin:5px;border-radius:4px}
+footer{background:#9b0000;color:white;text-align:center;padding:18px;margin-top:20px}
+@media(max-width:700px){
+.header{display:block;text-align:center}
+.search input{width:90%;margin-top:10px}
+nav a{display:block;border-top:1px solid #cc3333}
+}
 </style>
 </head>
+
 <body>
 
-<header>
-<h1>Career Result</h1>
-<p>Latest Jobs | Results | Admit Card | Answer Key | Syllabus</p>
-</header>
+<div class="top">
+Friday, May 16, 2026 | Career Result
+</div>
+
+<div class="header">
+<div class="logo">
+<h1>CAREER RESULT</h1>
+<p>India's Trusted Job & Exam Update Portal</p>
+</div>
+<div class="search">
+<input type="text" placeholder="Search Jobs, Results, Admit Card...">
+<button>Search</button>
+</div>
+</div>
 
 <nav>
+<a href="#">Home</a>
 <a href="#jobs">Latest Jobs</a>
 <a href="#results">Results</a>
 <a href="#admit">Admit Card</a>
+<a href="#answer">Answer Key</a>
 <a href="#syllabus">Syllabus</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="notice">
-⚠️ Form भरने से पहले official notification जरूर पढ़ें।
-</div>
+<div class="ad">Advertisement Area</div>
 
 <div class="container">
+
+<div class="cards">
+<a class="card red" href="#jobs">Latest Jobs</a>
+<a class="card green" href="#results">Results</a>
+<a class="card blue" href="#admit">Admit Card</a>
+<a class="card purple" href="#answer">Answer Key</a>
+<a class="card orange" href="#syllabus">Syllabus</a>
+<a class="card brown" href="#admission">Admission</a>
+</div>
 
 <div class="grid">
 
 <div class="box" id="results">
 <h2>Results</h2>
 <ul>
-<li><a href="#r1">Rajasthan PTET Result 2026 – Out</a></li>
-<li><a href="#r2">NTA JIPMAT Result 2026 – Out</a></li>
-<li><a href="#r3">BCECE Result / Rank Card 2026 – Out</a></li>
-<li><a href="#r4">Bihar Board 10th Result 2026</a></li>
-<li><a href="#r5">SSC GD Result 2026</a></li>
+<li><a href="#r1">Rajasthan PTET Result 2026 – Out</a><span class="new">NEW</span></li>
+<li><a href="#r2">Bihar Board 10th Result 2026 – Out</a><span class="new">NEW</span></li>
+<li><a href="#r3">SSC GD Result 2026 – Out</a><span class="new">NEW</span></li>
+<li><a href="#r4">Railway ALP Result 2026 – Out</a></li>
+<li><a href="#r5">BPSC Result 2026 – Out</a></li>
+<li><a href="#r6">CTET Result 2026 – Out</a></li>
+<li><a href="#r7">Bihar Police Final Result 2026</a></li>
+<li><a href="#r8">UP Police Result 2026</a></li>
+<li><a href="#r9">NTA CUET UG Result 2026</a></li>
+<li><a href="#r10">PNB Bank LBO Final Result 2026</a></li>
 </ul>
+<a href="#results" class="btn">View All Results</a>
 </div>
 
 <div class="box" id="jobs">
 <h2>Latest Jobs</h2>
 <ul>
-<li><a href="#job1">SSC CGL Online Form 2026</a></li>
-<li><a href="#job2">SSC CHSL Online Form 2026</a></li>
-<li><a href="#job3">Railway RRB ALP Correction Form 2026</a></li>
-<li><a href="#job4">Railway Technician Online Form 2026</a></li>
-<li><a href="#job5">SBI PO Online Form 2026</a></li>
-<li><a href="#job6">BSSC Inter Level Online Form 2026</a></li>
-<li><a href="#job7">Indian Navy SSC Officer Online Form 2027</a></li>
+<li><a href="#j1">SSC CGL Online Form 2026</a><span class="new">NEW</span></li>
+<li><a href="#j2">Railway Group D Online Form 2026</a><span class="new">NEW</span></li>
+<li><a href="#j3">Bihar Police Constable Vacancy 2026</a><span class="new">NEW</span></li>
+<li><a href="#j4">BSSC Inter Level Online Form 2026</a></li>
+<li><a href="#j5">Indian Navy SSC Officer Form 2026</a></li>
+<li><a href="#j6">SBI PO Online Form 2026</a></li>
+<li><a href="#j7">SSC CHSL Online Form 2026</a></li>
+<li><a href="#j8">Railway Technician Online Form 2026</a></li>
+<li><a href="#j9">UPSSSC Lower PCS Form 2026</a></li>
+<li><a href="#j10">CSIR ASO Online Form 2026</a></li>
 </ul>
-</div>
-
-<div class="box" id="admit">
-<h2>Admit Card</h2>
-<ul>
-<li><a href="#admit1">SSC CHSL Admit Card 2026</a></li>
-<li><a href="#admit2">Bihar Police Admit Card 2026</a></li>
-<li><a href="#admit3">Railway Exam Admit Card 2026</a></li>
-</ul>
+<a href="#jobs" class="btn">View All Jobs</a>
 </div>
 
 </div>
 
-<div class="post" id="job1">
+<div class="small-grid">
+
+<div class="small" id="admit">
+<h3>Admit Card</h3>
+<a href="#a1">SSC CHSL Admit Card 2026</a>
+<a href="#a2">Railway ALP Admit Card 2026</a>
+<a href="#a3">Bihar Police Admit Card 2026</a>
+<a href="#a4">BPSC Admit Card 2026</a>
+</div>
+
+<div class="small" id="answer">
+<h3>Answer Key</h3>
+<a href="#ak1">SSC CGL Answer Key 2026</a>
+<a href="#ak2">Railway Answer Key 2026</a>
+<a href="#ak3">Bihar Police Answer Key 2026</a>
+<a href="#ak4">CTET Answer Key 2026</a>
+</div>
+
+<div class="small">
+<h3>Important Links</h3>
+<a href="https://ssc.gov.in/" target="_blank">SSC Official Website</a>
+<a href="https://www.rrbcdg.gov.in/" target="_blank">Railway Official Website</a>
+<a href="https://www.csbc.bih.nic.in/" target="_blank">Bihar Police Official Website</a>
+<a href="https://www.bpsc.bih.nic.in/" target="_blank">BPSC Official Website</a>
+</div>
+
+</div>
+
+<div class="post" id="j1">
 <h2>SSC CGL Online Form 2026</h2>
-<table>
-<tr><th>Details</th><th>Information</th></tr>
-<tr><td>Post Name</td><td>SSC CGL Various Posts</td></tr>
-<tr><td>Apply Mode</td><td>Online</td></tr>
-<tr><td>Eligibility</td><td>Graduation Pass</td></tr>
-<tr><td>Age Limit</td><td>As per official rules</td></tr>
-<tr><td>Last Date</td><td>Check Official Notification</td></tr>
-</table>
-<p>
-<a class="btn" href="https://ssc.gov.in/" target="_blank">Apply Online</a>
-<a class="btn" href="https://ssc.gov.in/" target="_blank">Official Website</a>
-<a class="btn" href="https://ssc.gov.in/" target="_blank">Notification PDF</a>
-</p>
+<p><b>Short Information:</b> SSC CGL 2026 ke liye online form, eligibility, age limit aur important links yahan diye gaye hain.</p>
+<p><b>Important Dates:</b> Coming Soon</p>
+<p><b>Age Limit:</b> Official notification ke anusaar</p>
+<p><b>Qualification:</b> Graduation</p>
+<a class="link-btn" href="https://ssc.gov.in/" target="_blank">Apply Online</a>
+<a class="link-btn" href="https://ssc.gov.in/" target="_blank">Download Notification</a>
+<a class="link-btn" href="https://ssc.gov.in/" target="_blank">Official Website</a>
 </div>
 
-<div class="post" id="job2">
-<h2>SSC CHSL Online Form 2026</h2>
-<table>
-<tr><td>Qualification</td><td>12th Pass</td></tr>
-<tr><td>Apply Mode</td><td>Online</td></tr>
-<tr><td>Official Website</td><td>SSC</td></tr>
-</table>
-<a class="btn" href="https://ssc.gov.in/" target="_blank">Apply Online</a>
+<div class="post" id="j2">
+<h2>Railway Group D Online Form 2026</h2>
+<p><b>Short Information:</b> Railway Group D vacancy ke liye online form aur official links.</p>
+<p><b>Qualification:</b> 10th Pass / ITI</p>
+<a class="link-btn" href="https://www.rrbcdg.gov.in/" target="_blank">Apply Online</a>
+<a class="link-btn" href="https://www.rrbcdg.gov.in/" target="_blank">Official Website</a>
 </div>
 
-<div class="post" id="job3">
-<h2>Railway RRB ALP Correction Form 2026</h2>
-<table>
-<tr><td>Department</td><td>Railway Recruitment Board</td></tr>
-<tr><td>Form Type</td><td>Correction / Edit Form</td></tr>
-</table>
-<a class="btn" href="https://www.rrbapply.gov.in/" target="_blank">Correction Form</a>
-</div>
-
-<div class="post" id="job4">
-<h2>Railway Technician Online Form 2026</h2>
-<table>
-<tr><td>Department</td><td>Railway Recruitment Board</td></tr>
-<tr><td>Apply Mode</td><td>Online</td></tr>
-</table>
-<a class="btn" href="https://www.rrbapply.gov.in/" target="_blank">Apply Online</a>
-</div>
-
-<div class="post" id="job5">
-<h2>SBI PO Online Form 2026</h2>
-<table>
-<tr><td>Department</td><td>State Bank of India</td></tr>
-<tr><td>Qualification</td><td>Graduation</td></tr>
-</table>
-<a class="btn" href="https://sbi.co.in/web/careers" target="_blank">Apply Online</a>
-</div>
-
-<div class="post" id="job6">
-<h2>BSSC Inter Level Online Form 2026</h2>
-<table>
-<tr><td>Department</td><td>Bihar Staff Selection Commission</td></tr>
-<tr><td>Qualification</td><td>12th Pass</td></tr>
-</table>
-<a class="btn" href="https://bssc.bihar.gov.in/" target="_blank">Apply Online</a>
-</div>
-
-<div class="post" id="job7">
-<h2>Indian Navy SSC Officer Online Form 2027</h2>
-<table>
-<tr><td>Department</td><td>Indian Navy</td></tr>
-<tr><td>Apply Mode</td><td>Online</td></tr>
-</table>
-<a class="btn" href="https://www.joinindiannavy.gov.in/" target="_blank">Apply Online</a>
-</div>
-
-<div class="post" id="r1">
-<h2>Rajasthan PTET Result 2026</h2>
-<a class="btn" href="#" target="_blank">Check Result</a>
+<div class="post" id="j3">
+<h2>Bihar Police Constable Vacancy 2026</h2>
+<p><b>Short Information:</b> Bihar Police Constable recruitment update.</p>
+<p><b>Qualification:</b> 12th Pass</p>
+<a class="link-btn" href="https://www.csbc.bih.nic.in/" target="_blank">Apply Online</a>
+<a class="link-btn" href="https://www.csbc.bih.nic.in/" target="_blank">Official Website</a>
 </div>
 
 <div class="post" id="r2">
-<h2>NTA JIPMAT Result 2026</h2>
-<a class="btn" href="https://exams.nta.ac.in/" target="_blank">Check Result</a>
+<h2>Bihar Board 10th Result 2026</h2>
+<p><b>Short Information:</b> Bihar Board result check karne ke liye official link.</p>
+<a class="link-btn" href="https://results.biharboardonline.com/" target="_blank">Check Result</a>
+<a class="link-btn" href="https://biharboardonline.com/" target="_blank">Official Website</a>
+</div>
+
+<div class="post" id="contact">
+<h2>Contact Us</h2>
+<p>Email: info@careerresult.in</p>
+<p>Phone: +91 1234567890</p>
 </div>
 
 <div class="post">
 <h2>Disclaimer</h2>
-<p>Career Result government website नहीं है। यह केवल information purpose के लिए है। Apply करने से पहले official website जरूर check करें।</p>
+<p>Career Result government website nahi hai. Yahan di gayi jankari educational aur information purpose ke liye hai. Form bharne se pehle official notification जरूर check karein.</p>
 </div>
 
 </div>
 
 <footer>
-© 2026 Career Result
+© 2026 Career Result. All Rights Reserved.
 </footer>
 
 </body>
