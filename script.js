@@ -1,35 +1,79 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// Career Result - script.js
 
-document.getElementById("siteName").textContent = siteData.siteName;
-document.getElementById("tagline").textContent = siteData.tagline;
-document.getElementById("founderName").textContent = siteData.founderName;
-document.getElementById("youtubeBtn").href = siteData.youtubeLink;
-document.getElementById("emailText").textContent = "Email: " + siteData.email;
-document.getElementById("instagramText").textContent = "Instagram: " + siteData.instagram;
-document.getElementById("telegramText").textContent = "Telegram: " + siteData.telegram;
-document.getElementById("subscribers").textContent = siteData.subscribers;
-document.getElementById("videosCount").textContent = siteData.videosCount;
+// Search Function
+function searchJobs() {
+    let input = document.getElementById("searchInput");
+    if (!input) return;
 
-const videoList = document.getElementById("videoList");
-siteData.videos.forEach(v => {
-  videoList.innerHTML += `
-    <div class="card">
-      <h3>${v.title}</h3>
-      <p>${v.description}</p>
-      <br>
-      <a href="${v.link}" target="_blank">Watch Now →</a>
-    </div>
-  `;
-});
+    let filter = input.value.toUpperCase();
+    let cards = document.getElementsByClassName("job-card");
 
-const notesList = document.getElementById("notesList");
-siteData.notes.forEach(n => {
-  notesList.innerHTML += `
-    <div class="card">
-      <h3>${n.title}</h3>
-      <p>${n.description}</p>
-      <br>
-      <a href="${n.link}" target="_blank">Download →</a>
-    </div>
-  `;
-});
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h3")[0];
+
+        if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+// Current Date
+window.onload = function () {
+
+    let today = new Date();
+
+    let options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+
+    let dateBox = document.getElementById("todayDate");
+
+    if (dateBox) {
+        dateBox.innerHTML = today.toLocaleDateString("en-IN", options);
+    }
+
+};
+
+// Scroll To Top Button
+
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+
+    if (!topBtn) return;
+
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+};
+
+function topFunction() {
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+}
+
+// Dark Mode
+
+function darkMode() {
+
+    document.body.classList.toggle("dark-mode");
+
+}
+
+// Alert
+
+console.log("Career Result Loaded Successfully");
